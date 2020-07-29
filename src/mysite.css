@@ -1,0 +1,164 @@
+button {
+  color: black;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+.App {
+  margin: auto;
+  width: 880px;
+}
+
+.navbar {
+  width: 100%;
+  top: 0;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar button {
+  display: block;
+  padding: 20px 10px;
+  margin: 0px 20px 0px 20px;
+  border: 0px solid white;
+  background-color: white;
+  font-size: 14px;
+}
+
+.navbar button:focus {
+  outline: 0;
+}
+
+.navbar button:hover {
+  cursor: pointer;
+}
+
+.selected-tab {
+  color: #D63131;
+}
+
+.page-content {
+  margin: 0 30px;
+  font-family: Arial;
+  font-size: 16px;
+}
+
+.home-page {
+  width: 100%;
+}
+
+.img-container {
+  display:inline-block;
+  position: relative;
+  margin-left: 520px;
+}
+
+.resume-container {
+  display:inline-block;
+  position: relative;
+  margin-left: 320px;
+}
+
+.text-container {
+  display: inline-block;
+  margin-right:20px;
+  position: absolute;
+  min-width: 250px;
+  max-width: 570px;
+}
+
+.about-text {
+  display: block;
+  max-width: 500px;
+}
+
+.code-text {
+  display: block;
+  max-width: 300px;
+}
+
+.about-text a, .art-text a {
+  text-decoration: none;
+}
+
+.profile-pic {
+  display:block;
+  width: 300px;
+}
+
+.resume {
+  display:block;
+  width: 500px;
+  margin-top: -30px;
+}
+
+.portrait-pair-container {
+  width: 100%;
+}
+
+.portrait-container {
+  display: inline-block;
+  width: 50%;
+}
+
+.portrait-image {
+  display: block;
+  margin: auto;
+  width: 350px;
+}
+
+.landscape-container {
+  width: 100%;
+}
+
+.landscape-image {
+  display:block;
+  margin: auto;
+  width: 550px;
+}
+
+.art-description, .art-date {
+  text-align: center;
+}
+
+.art-date {
+  margin-bottom: 50px;
+}
+
+
+@media only screen and (max-width: 400px) {
+  .App {
+    width: 380px;
+  }
+  .about-text, .art-text, .code-text {
+    max-width: 315px;
+  }
+  .img-container {
+    margin-left: 0px;
+    margin-top: 600px;
+  }
+  .resume-container {
+    margin-left: 0px;
+    margin-top: 450px;
+  }
+  .resume {
+    width: 400px;
+    margin-left: -50px;
+  }
+  .landscape-image {
+    width: 300px;
+  }
+  .portrait-image {
+    margin: auto;
+    width: 300px;
+  }
+  .portrait-container {
+    display: block;
+    width: 100%;
+  }
+}
+
