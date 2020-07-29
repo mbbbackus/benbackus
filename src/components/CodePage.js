@@ -13,11 +13,12 @@ class CodePage extends Component {
             most interesting to solve. My strongest technologies 
             are definitely Python/Django and Javascript/React.js. <br/><br/>
 
-            My github can be found here: https://github.com/mbbbackus<br/><br/>
+            Here is <a href="https://github.com/mbbbackus">my github</a>.<br/><br/>
 
             I’ve written a lot more code professionally than I 
-            have for hobby, so here’s my LinkedIn for reference:
-            https://www.linkedin.com/in/ben-backus-72845492/<br/><br/>
+            have for hobby, so here’s
+            <a href="https://www.linkedin.com/in/ben-backus-72845492/">
+            my LinkedIn for reference</a><br/><br/>
 
             I’m working on some projects at the moment (as of 
             August 2020) so expect them to show up here soon.<br/><br/>
