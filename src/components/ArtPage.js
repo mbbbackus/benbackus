@@ -53,7 +53,7 @@ class ArtPage extends Component {
         <div className="art-text-container">
           <p className="art-text">
             I’d like to preface my visual art by saying that I love color. 
-            Philosophically, it’s what provoked me to consider qualia when 
+            Philosophically, it’s what provoked me to consider <a href="https://plato.stanford.edu/entries/qualia/">qualia</a> when 
             thinking about AI, which has made the aesthetic experience of 
             color much more rich for me. <br/><br/>
 

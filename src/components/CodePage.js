@@ -16,7 +16,7 @@ class CodePage extends Component {
             Here is <a href="https://github.com/mbbbackus">my github</a>.<br/><br/>
 
             I’ve written a lot more code professionally than I 
-            have for hobby, so here’s
+            have for hobby, so here’s 
             <a href="https://www.linkedin.com/in/ben-backus-72845492/"> 
             my LinkedIn for reference</a><br/><br/>
 
