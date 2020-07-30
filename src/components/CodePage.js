@@ -17,7 +17,7 @@ class CodePage extends Component {
 
             I’ve written a lot more code professionally (in private repositories) than I 
             have for hobby, so here’s <a href="https://www.linkedin.com/in/ben-backus-72845492/"> 
-            my LinkedIn for reference</a><br/><br/>
+            my LinkedIn </a><br/><br/>for reference.
 
             I’m working on some projects at the moment (as of 
             August 2020) so expect them to show up here soon.<br/><br/>
