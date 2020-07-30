@@ -40,8 +40,7 @@ class WritingPage extends Component {
         who doesn't want to be the protagonist of the book I wrote).<br/>
         <a href={PoF}>"Prison of Freedom Excerpt"</a><br/><br/>
         Also, I'm drafting a new book that I might actually share with 
-        people. Here's the outline: 
-        <a href={PTB}>"Phenomenal Trope Book Outline"</a><br/><br/>
+        people. Here's the outline: <a href={PTB}>"Phenomenal Trope Book Outline"</a><br/><br/>
       </div>
     );
   }
