@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.dfbda1cf.chunk.css",
+    "main.css": "/static/css/main.ed1cb737.chunk.css",
     "main.js": "/static/js/main.054be612.chunk.js",
     "main.js.map": "/static/js/main.054be612.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e387f811.js",
@@ -8,9 +8,9 @@
     "static/js/2.b34d39fb.chunk.js": "/static/js/2.b34d39fb.chunk.js",
     "static/js/2.b34d39fb.chunk.js.map": "/static/js/2.b34d39fb.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b41cb05168881d3073d64e176c65a56d.js": "/precache-manifest.b41cb05168881d3073d64e176c65a56d.js",
+    "precache-manifest.6923a0901be32570303d91fcecade454.js": "/precache-manifest.6923a0901be32570303d91fcecade454.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.dfbda1cf.chunk.css.map": "/static/css/main.dfbda1cf.chunk.css.map",
+    "static/css/main.ed1cb737.chunk.css.map": "/static/css/main.ed1cb737.chunk.css.map",
     "static/js/2.b34d39fb.chunk.js.LICENSE.txt": "/static/js/2.b34d39fb.chunk.js.LICENSE.txt",
     "static/media/AdHunterPoster.png": "/static/media/AdHunterPoster.785ba28c.png",
     "static/media/Backus_Cognition.pdf": "/static/media/Backus_Cognition.644cd32f.pdf",
@@ -50,7 +50,7 @@
   "entrypoints": [
     "static/js/runtime-main.e387f811.js",
     "static/js/2.b34d39fb.chunk.js",
-    "static/css/main.dfbda1cf.chunk.css",
+    "static/css/main.ed1cb737.chunk.css",
     "static/js/main.054be612.chunk.js"
   ]
 }
