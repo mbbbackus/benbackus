@@ -12,12 +12,19 @@ ul {
 }
 
 .navbar {
-  width: 100%;
+  font-family: Arial;
+  font-size: 14px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: auto;
+  width: 820px;
   top: 0;
 }
 
-.navbar li {
-  display: inline-block;
+.nav-link {
+  margin-right: 60px;
+  text-decoration: none;
+  color: black;
 }
 
 .navbar button {
@@ -29,11 +36,11 @@ ul {
   font-size: 14px;
 }
 
-.navbar button:focus {
+.nav-link:focus {
   outline: 0;
 }
 
-.navbar button:hover {
+.nav-link:hover {
   cursor: pointer;
 }
 
