@@ -16,12 +16,12 @@ class HomePage extends Component {
             I recently graduated from Stanford University with a 
             degree in <a href="https://symsys.stanford.edu/">Symbolic Systems</a>. <br/><br/>
 
-            Here's <a href={resume}>my resumé</a>.
+            Here's <a href={resume}>my resumé</a>,
 
-            Here's <a href="https://github.com/mbbbackus">my github</a>.
+            here's <a href="https://github.com/mbbbackus">my github</a>,
 
-            Here’s <a href="https://www.linkedin.com/in/ben-backus-72845492/"> 
-            my LinkedIn </a>. <br/><br/>
+            and here’s <a href="https://www.linkedin.com/in/ben-backus-72845492/"> 
+            my LinkedIn</a>. <br/><br/>
 
             For a while I’ve been interested in silly stuff like 
             how to program a robot to have human experiences or how to 
