@@ -52,9 +52,9 @@ class ArtPage extends Component {
       <div>
         <div className="navbar">
           <a className="nav-link" href="/">Home</a>
-          <a className="nav-link" href="/Code/">Code</a>
-          <a className="nav-link selected-tab" href="/Art/">Art</a>
-          <a className="nav-link" href="/Writing/">Writing</a>
+          <a className="nav-link" href="/#/Code/">Code</a>
+          <a className="nav-link selected-tab" href="/#/Art/">Art</a>
+          <a className="nav-link" href="/#/Writing/">Writing</a>
         </div>
         <div className="page-content">
           <div className="artPage">

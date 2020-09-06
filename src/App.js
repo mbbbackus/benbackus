@@ -5,7 +5,7 @@ import ArtPage from './components/ArtPage';
 import WritingPage from './components/WritingPage';
 import { tabNames } from "./variables";
 import './mysite.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 
 function App() {
   return (
