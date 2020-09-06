@@ -64,12 +64,6 @@ ul {
   margin-left: 520px;
 }
 
-.resume-container {
-  display:inline-block;
-  position: relative;
-  margin-left: 320px;
-}
-
 .anchor {
   color: black;
   text-decoration: none;
@@ -108,12 +102,6 @@ ul {
 .profile-pic {
   display:block;
   width: 300px;
-}
-
-.resume {
-  display:block;
-  width: 500px;
-  margin-top: -30px;
 }
 
 .portrait-pair-container {
@@ -168,14 +156,6 @@ ul {
   .img-container {
     margin-left: 0px;
     margin-top: 600px;
-  }
-  .resume-container {
-    margin-left: 0px;
-    margin-top: 450px;
-  }
-  .resume {
-    width: 400px;
-    margin-left: -50px;
   }
   .landscape-image {
     width: 300px;
