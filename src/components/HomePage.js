@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import profilePic from "../media/profile_pic.jpg";
+import resume from "../media/writing/Backus_Resume.pdf";
 
 class HomePage extends Component {
   render () {
@@ -14,6 +15,13 @@ class HomePage extends Component {
             <a href="https://proof.vc/team/john-backus/">[3] </a><br/><br/>
             I recently graduated from Stanford University with a 
             degree in <a href="https://symsys.stanford.edu/">Symbolic Systems</a>. <br/><br/>
+
+            Here's <a href={resume}>my resumé</a>.
+
+            Here's <a href="https://github.com/mbbbackus">my github</a>.
+
+            Here’s <a href="https://www.linkedin.com/in/ben-backus-72845492/"> 
+            my LinkedIn </a>. <br/><br/>
 
             For a while I’ve been interested in silly stuff like 
             how to program a robot to have human experiences or how to 
@@ -31,6 +39,8 @@ class HomePage extends Component {
 
             I’d love it if you checked out some of my creations! It ain’t 
             much, but it’s honest work :)
+
+
           </p>
         </div>
         <div className="img-container">

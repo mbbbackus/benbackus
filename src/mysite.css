@@ -111,6 +111,14 @@ ul {
   width: 350px;
 }
 
+.code-img {
+  width: 100%;
+}
+
+.code-img-vertical {
+  width: 50%;
+}
+
 .landscape-container {
   width: 100%;
 }
