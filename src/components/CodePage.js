@@ -13,9 +13,9 @@ class CodePage extends Component {
       <div>
         <div className="navbar">
           <a className="nav-link" href="/">Home</a>
-          <a className="nav-link selected-tab" href="/Code">Code</a>
-          <a className="nav-link" href="/Art">Art</a>
-          <a className="nav-link" href="/Writing">Writing</a>
+          <a className="nav-link selected-tab" href="/Code/">Code</a>
+          <a className="nav-link" href="/Art/">Art</a>
+          <a className="nav-link" href="/Writing/">Writing</a>
         </div>
 
         <div className="page-content">
@@ -26,7 +26,7 @@ class CodePage extends Component {
               stack internships. My strongest technologies 
               are Python/Django and Javascript/React.js. <br/>
             </p>
-            <h2>Plot the Plot</h2>
+            <a className="anchor" name="plottheplot" href="#plottheplot"><h2>Plot the Plot</h2></a>
             <p>
               As of September 2020, I've been working 
               on <a href="http://plottheplot.com">Plot the Plot</a>, a website
@@ -35,7 +35,7 @@ class CodePage extends Component {
               <img className="code-img" src="https://i.imgur.com/WvjwR3m.png"/>
             </p>
 
-            <h2>Stanford Waste Sensor</h2>
+            <a className="anchor" name="wastesensor" href="#wastesensor"><h2>Stanford Waste Sensor</h2></a>
             <p>
               I spent my Junior and Senior year at Stanford developing a cheap
               sensor that could measure the capacity of the dumpsters on campus and
@@ -44,7 +44,7 @@ class CodePage extends Component {
               <img className="code-img" src={WasteSensorSchematic} />
             </p>
 
-            <h2>Ad Hunter</h2>
+            <a className="anchor" name="adhunter" href="#adhunter"><h2>Ad Hunter</h2></a>
             <p>
               For one of my classes at Stanford, some friends and I developed a classifier
               that would classify instagram posts as either ads or not. The motivation was 
@@ -55,7 +55,7 @@ class CodePage extends Component {
               <img className="code-img" src={AdHunterPoster}/>
             </p>
 
-            <h2>Vex Robotics</h2>
+            <a className="anchor" name="vexrobotics" href="#vexrobotics"><h2>Vex Robotics</h2></a>
             <p>
               In high school, I participated in my school's 
               competitive <a href="https://www.vexrobotics.com/">Vex Robotics</a> program. I

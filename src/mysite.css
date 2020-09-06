@@ -70,6 +70,19 @@ ul {
   margin-left: 320px;
 }
 
+.anchor {
+  color: black;
+  text-decoration: none;
+}
+
+.anchor:hover {
+  cursor: pointer;
+}
+
+.anchor:visited {
+  color: black;
+}
+
 .text-container {
   display: inline-block;
   margin-right:20px;
