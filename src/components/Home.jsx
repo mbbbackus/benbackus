@@ -207,9 +207,11 @@ function Home() {
   }
 
   useEffect(() => {
-    window.addEventListener('mousewheel', bodyMouseWheel, {passive: false})
+    window.addEventListener('mousewheel', bodyMouseWheel, {passive: false});
+    window.removeEventListener('touchmove', bodyMouseWheel, {passive: false});
     return () => {
       window.removeEventListener('mousewheel', bodyMouseWheel);
+      window.removeEventListener('touchmove', bodyMouseWheel);
       document.querySelectorAll('.square').forEach(el => el.remove());
     };
   }, []);

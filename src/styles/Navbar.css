@@ -5,6 +5,10 @@
     text-underline-offset: 5px;
 }
 
+* {
+    font-family: "Garamond";
+}
+
 .nav-link:hover {
     color: white;
 }

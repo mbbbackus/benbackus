@@ -1,7 +1,10 @@
 body {
     color: white;
     background-color: rgb(20, 20, 20);
-    font-family: ui-monospace;
+}
+
+* {
+    font-family: "Garamond";
 }
 
 a {
@@ -21,10 +24,3 @@ a {
 .writingPage {
     margin-top: 25px;
 }
-
-/* .landscape-image {
-    width: min(100%, 1000px);
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-} */
