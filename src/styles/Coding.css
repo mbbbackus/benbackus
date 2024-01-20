@@ -1,0 +1,26 @@
+body {
+    color: white;
+    background-color: rgb(20, 20, 20);
+    font-family: ui-monospace;
+}
+
+a {
+    color: white;
+    text-decoration-thickness: 0.1px;
+    text-underline-offset: 5px;
+}
+
+.coding-container {
+    color: rgb(205, 205, 205);
+    font-size: 20px;
+    padding: 20px;
+    width: min(calc(100%-40px), 1000px);
+    margin: auto;
+}
+
+.code-img {
+    width: min(100%, 1000px);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
