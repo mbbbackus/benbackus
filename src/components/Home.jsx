@@ -15,7 +15,7 @@ function Home() {
   const handleTouchMove = (event) => {
     const touchY = event.touches[0].clientY;
     const deltaY = touchY - lastTouchY;
-    if (deltaY > 0) {
+    if (deltaY < 0) {
       handleScrollDown();
     } else {
       handleScrollUp();
