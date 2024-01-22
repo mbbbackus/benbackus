@@ -21,6 +21,7 @@ export function generateSquaresInCircle(i, isRotating=false, isExpanding=false, 
         height: ${isExpanding ? squareSize * Math.random(0.5, 1.5) : squareSize}px;
         border: 1px solid white;
         background-color: rgb(20, 20, 20);
+        touch-action: none;
         ${isRotating ? `transform: rotate(${angle*i}deg)` : ''}
         ${isCircles ? 'border-radius: 25px;': ''}
     `);
