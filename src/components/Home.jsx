@@ -12,6 +12,8 @@ function Home() {
   const [downArrow, setDownArrow] = useState(null);
   const [lastTouchY, setLastTouchY] = useState(0);
 
+  const isMounted = useRef(false)
+
   const handleTouchMove = (event) => {
     const touchY = event.touches[0].clientY;
     const deltaY = touchY - lastTouchY;
@@ -224,12 +226,15 @@ function Home() {
   }
 
   useEffect(() => {
+    isMounted.current = true;
     window.addEventListener('mousewheel', bodyMouseWheel, {passive: false});
     return () => {
       window.removeEventListener('mousewheel', bodyMouseWheel);
       document.querySelectorAll('.square').forEach(el => el.remove());
+      isMounted.current = false 
     };
   }, []);
+
 
   const clickUpButton = async () => {
     if (isAnimatingRef.current) return;
@@ -242,6 +247,7 @@ function Home() {
     }
 
     while (index % 300 !== 0 || index % 600 === 0) {
+      if (isMounted.current === false) return;
       backwardAnimation();
       await new Promise(r => setTimeout(r, 1));
       index--;
@@ -261,6 +267,7 @@ function Home() {
     }
 
     while (index % 300 !== 0 || index % 600 === 0) {
+      if (isMounted.current === false) return;
       forwardAnimation();
       await new Promise(r => setTimeout(r, 1));
       index++;
