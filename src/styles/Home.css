@@ -27,7 +27,7 @@ a {
   text-align: center;
   color: white;
   position: fixed;
-  bottom: 100px;
+  bottom: calc(50% - 30px);
   font-family: "Garamond";
   /* width: 100px; */
   height: 50px;
