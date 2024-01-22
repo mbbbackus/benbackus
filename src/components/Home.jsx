@@ -10,7 +10,24 @@ function Home() {
   const [title, setTitle] = useState(null);
   const [upArrow, setUpArrow] = useState(null);
   const [downArrow, setDownArrow] = useState(null);
-  const [isAutoScrolling, setIsAutoScrolling] = useState(false);
+  const [lastTouchY, setLastTouchY] = useState(0);
+
+  const handleTouchMove = (event) => {
+    const touchY = event.touches[0].clientY;
+    const deltaY = touchY - lastTouchY;
+    if (deltaY < 0) {
+      handleScrollDown();
+    } else {
+      handleScrollUp();
+    }
+
+    setLastTouchY(touchY);
+  };
+
+  const handleTouchStart = (event) => {
+    setLastTouchY(event.touches[0].clientY);
+  };
+
 
   const isAnimatingRef = useRef(false);
 
@@ -208,10 +225,8 @@ function Home() {
 
   useEffect(() => {
     window.addEventListener('mousewheel', bodyMouseWheel, {passive: false});
-    window.removeEventListener('touchmove', bodyMouseWheel, {passive: false});
     return () => {
       window.removeEventListener('mousewheel', bodyMouseWheel);
-      window.removeEventListener('touchmove', bodyMouseWheel);
       document.querySelectorAll('.square').forEach(el => el.remove());
     };
   }, []);
@@ -305,7 +320,12 @@ function Home() {
   }, [scrollCount]);
 
   return (
-    <div className="Home">
+    <div 
+      onTouchMove={handleTouchMove} 
+      onTouchStart={handleTouchStart}
+      style={{ touchAction: 'none', overflowY: 'scroll', height: '100vh' }}
+      className="Home"
+    >
       {title}
       {caption}
       {upArrow}
