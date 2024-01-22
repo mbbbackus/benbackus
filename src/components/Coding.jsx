@@ -19,9 +19,8 @@ function Coding() {
         <div className="page-content">
           <div className="codePage">
             <p>
-              At the moment, all of my professional experience pertains to full stack web development. However,
-              I've dabbled in mechatronics and AI as well, and I've always been enthusiastic about learning
-              about new tech, especially given how much of a sci-fi fan I am. <br/>
+              At the moment, all of my professional experience pertains to full stack web development. 
+              However, I've dabbled in mechatronics and AI as well, as you'll see below. <br/>
             </p>
 
             <Link smooth className="anchor" id="qualiacookbook" to="#qualiacookbook"><h2>Qualia Cookbook</h2></Link>

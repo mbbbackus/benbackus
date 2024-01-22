@@ -26,8 +26,7 @@ function About() {
                     Here’s <a href="https://www.linkedin.com/in/ben-backus-72845492/"> 
                     my LinkedIn</a>. <br/><br/>
 
-                    For a while I’ve been interested in silly stuff like 
-                    how to program a robot to have human experiences or how to 
+                    I’m interested in silly questions like how to get a machine to have experiences and how to 
                     live a meaningful life. So far, I have two conclusions: <br/><br/>
 
 
@@ -38,10 +37,6 @@ function About() {
                         pictures, and writing chaotic stories are all suprisingly 
                         meaningful to me, so I’m gonna keep doing all of that. <br/><br/>                        
                     </div>
-
-                    There’s a lot more going on in my head than that but I can’t 
-                    say the rest of it has been very useful to me, so I’ll leave 
-                    it at that. <br/><br/>
 
                     I’d love it if you checked out some of my creations! It ain’t 
                     much, but it’s honest work :)
