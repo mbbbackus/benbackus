@@ -7,6 +7,10 @@ a {
   text-decoration-thickness: 0.1px;
 }
 
+.Home {
+  height: calc(100vh - 50px);
+}
+
 .name-container {
   text-align: center;
   color: rgb(59, 59, 59);

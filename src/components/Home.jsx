@@ -15,7 +15,7 @@ function Home() {
   const handleTouchMove = (event) => {
     const touchY = event.touches[0].clientY;
     const deltaY = touchY - lastTouchY;
-    if (deltaY < 0) {
+    if (deltaY > 0) {
       handleScrollDown();
     } else {
       handleScrollUp();
@@ -211,14 +211,14 @@ function Home() {
 
   const handleScrollDown = () => {
     if (isAnimatingRef.current) return;
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 8; i++) {
       forwardAnimation();
     }
   }
 
   const handleScrollUp = () => {
     if (isAnimatingRef.current) return;
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 8; i++) {
       backwardAnimation();
     }
   }
@@ -323,7 +323,7 @@ function Home() {
     <div 
       onTouchMove={handleTouchMove} 
       onTouchStart={handleTouchStart}
-      style={{ touchAction: 'none', overflowY: 'scroll', height: '100vh' }}
+      style={{ touchAction: 'none'}}
       className="Home"
     >
       {title}
