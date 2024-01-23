@@ -89,10 +89,19 @@ function Home() {
 
   const FINISH_LINE = CHECKPOINT_EIGHT;
 
-  const drawShapes = (index, squares, setSquaresRef, intervalModifier, isRotating=false, isExpanding=false, isCircles=false) => {
+  const drawShapes = (
+    index, 
+    squares, 
+    setSquaresRef, 
+    intervalModifier, 
+    isRotating=false, 
+    isExpanding=false, 
+    isCircles=false,
+    isFadeIn=false
+  ) => {
     const offsetIndex = index - INTERVAL * intervalModifier;
     if (offsetIndex >= squares.length) {
-      const newSquare = generateSquaresInCircle(offsetIndex, isRotating, isExpanding, isCircles);
+      const newSquare = generateSquaresInCircle(offsetIndex, isRotating, isExpanding, isCircles, isFadeIn);
       setSquaresRef(squares.concat(newSquare))
     } else {
       const currentSquare = squares[offsetIndex];
@@ -138,7 +147,7 @@ function Home() {
 
     // OPEN CIRCLE:
     if (index < CHECKPOINT_ONE) {
-      drawShapes(index, squares, setSquaresRef, 0, false, false, true);
+      drawShapes(index, squares, setSquaresRef, 0, false, false, true, true);
     } 
     // CLOSE CIRCLE:
     else if (index >= CHECKPOINT_ONE && index < CHECKPOINT_TWO) {
@@ -146,7 +155,7 @@ function Home() {
     } 
     // OPEN MOBIUS
     else if (index >= CHECKPOINT_TWO && index < CHECKPOINT_THREE) {
-      drawShapes(index, squares, setSquaresRef, 1);
+      drawShapes(index, squares, setSquaresRef, 1, false, false, false, true);
     }
     // CLOSE MOBIUS
     else if (index >= CHECKPOINT_THREE && index < CHECKPOINT_FOUR) {
@@ -298,8 +307,15 @@ function Home() {
 
     if (scrollCount === 0 || scrollCount === FINISH_LINE) {
       setTitle(
-        <div className="name-container fade-in" id="ben-backus-title">
-          Ben Backus
+        <div>
+          <div className="name-container fade-in" id="ben-backus-title">
+            Ben Backus
+          </div>
+          {scrollCount === FINISH_LINE ?
+            <div className="subtitle-container fade-in" id="subtitle">
+              You can contact me by adding mbbbackus to @gmail.com
+            </div> 
+          : ''}
         </div>
       )
 

@@ -11,11 +11,7 @@ function About() {
               <div className="about-page">
                 <div className="text-container">
                   <p className="about-text">
-                    Hi! I’m Ben Backus. I grew up in Virginia, 
-                    and I come from a family of entrepreneurs.
-                    <a href="https://johnback.us"> [1] </a>
-                    <a href="https://poised2sell.com/">[2] </a>
-                    <a href="https://proof.vc/team/john-backus/">[3] </a><br/><br/>
+                    Hi! I’m Ben Backus.
                     I graduated from Stanford University with a 
                     degree in <a href="https://symsys.stanford.edu/">Symbolic Systems</a>. <br/><br/>
 
@@ -25,6 +21,11 @@ function About() {
 
                     Here’s <a href="https://www.linkedin.com/in/ben-backus-72845492/"> 
                     my LinkedIn</a>. <br/><br/>
+
+                    I come from a family of entrepreneurs.
+                    <a href="https://johnback.us"> [1] </a>
+                    <a href="https://poised2sell.com/">[2] </a>
+                    <a href="https://proof.vc/team/john-backus/">[3] </a><br/><br/>
 
                     I’m interested in silly questions like how to get a machine to have experiences and how to 
                     live a meaningful life. So far, I have two conclusions: <br/><br/>

@@ -23,6 +23,25 @@ a {
   height: 90px;
 }
 
+.subtitle-container {
+  text-align: center;
+  color: rgb(59, 59, 59);
+  position: fixed;
+  font-size: 30px;
+  font-family: "Garamond";
+  top: calc(50% + 90px);
+  width: calc(100% - 80px);
+  margin-left: 40px;
+  margin-right: 40px;
+  height: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .name-container {
+    font-size: 80px;
+  }
+}
+
 .caption-container {
   text-align: center;
   color: white;

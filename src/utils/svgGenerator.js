@@ -1,4 +1,4 @@
-export function generateSquaresInCircle(i, isRotating=false, isExpanding=false, isCircles=false) {
+export function generateSquaresInCircle(i, isRotating=false, isExpanding=false, isCircles=false, isFadeIn=false) {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
     const squareSize = 50;
@@ -19,7 +19,7 @@ export function generateSquaresInCircle(i, isRotating=false, isExpanding=false, 
         top: ${top}px;
         width: ${isExpanding ? squareSize * Math.random(0.5, 1.5) : squareSize}px;
         height: ${isExpanding ? squareSize * Math.random(0.5, 1.5) : squareSize}px;
-        border: 1px solid white;
+        border: 1px solid rgba(255, 255, 255, ${isFadeIn ? i / 300 % 1 : 1});
         background-color: rgb(20, 20, 20);
         touch-action: none;
         ${isRotating ? `transform: rotate(${angle*i}deg)` : ''}
