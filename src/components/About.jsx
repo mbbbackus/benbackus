@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/About.css';
 import Navbar from "./Navbar";
-import resume from "../media/Backus_Resume_2024.pdf";
+import resume from "../media/writing/Backus_Resume_2024.pdf";
 
 function About() {
     return (
