@@ -1,0 +1,26 @@
+body {
+    color: white;
+    background-color: rgb(20, 20, 20);
+}
+
+* {
+    font-family: "Garamond";
+}
+
+a {
+    color: white;
+    text-decoration-thickness: 0.1px;
+    text-underline-offset: 5px;
+}
+
+.writing-container {
+    color: rgb(205, 205, 205);
+    font-size: 20px;
+    padding: 20px;
+    width: min(calc(100%-40px), 1000px);
+    margin: auto;
+}
+
+.writingPage {
+    margin-top: 25px;
+}
