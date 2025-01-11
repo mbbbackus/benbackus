@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c75a1a27.css",
-    "main.js": "/static/js/main.a110d038.js",
+    "main.js": "/static/js/main.fce161a8.js",
     "static/media/waste_sensor.png": "/static/media/waste_sensor.25ffe459d77237b4a58f.png",
     "static/media/time.jpg": "/static/media/time.3187adaa1221a6fd19a2.jpg",
     "static/media/into_the_vanity.jpg": "/static/media/into_the_vanity.b56563bda2464aa2f2a5.jpg",
@@ -17,14 +17,14 @@
     "static/media/Backus_Love_Story.pdf": "/static/media/Backus_Love_Story.6dc8d5d480b274861d55.pdf",
     "static/media/Backus_Cognition.pdf": "/static/media/Backus_Cognition.aef8a9aa809cfa941ba9.pdf",
     "static/media/Meta-realism.pdf": "/static/media/Meta-realism.b8a9e4b6c66cc7810eb6.pdf",
-    "static/media/Backus_Resume.pdf": "/static/media/Backus_Resume.de670ddec52d5ddc381b.pdf",
+    "static/media/Backus_Resume_2024.pdf": "/static/media/Backus_Resume_2024.eca239a983b4134a119b.pdf",
     "static/media/Metaphysics_complex_present_paper.pdf": "/static/media/Metaphysics_complex_present_paper.baaae8177f6f98f61533.pdf",
     "index.html": "/index.html",
     "main.c75a1a27.css.map": "/static/css/main.c75a1a27.css.map",
-    "main.a110d038.js.map": "/static/js/main.a110d038.js.map"
+    "main.fce161a8.js.map": "/static/js/main.fce161a8.js.map"
   },
   "entrypoints": [
     "static/css/main.c75a1a27.css",
-    "static/js/main.a110d038.js"
+    "static/js/main.fce161a8.js"
   ]
 }
