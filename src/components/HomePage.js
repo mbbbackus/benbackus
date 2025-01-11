@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import profilePic from "../media/profile_pic.jpg";
-import resume from "../media/writing/Backus_Resume.pdf";
+import resume from "../media/writing/Backus_Resume_2024.pdf";
 
 class HomePage extends Component {
   render () {
