@@ -9,8 +9,13 @@
 
 /* Hero section with Ben Backus name */
 .hero-section {
-  padding: 80px 20px 60px;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 20px;
 }
 
 .hero-name {
@@ -29,7 +34,8 @@
 }
 
 .page-section {
-  padding: 40px 20px;
+  min-height: 100vh;
+  padding: 60px 20px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
