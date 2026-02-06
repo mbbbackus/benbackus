@@ -13,10 +13,6 @@ function CodingSection() {
   return (
     <div className="codePage">
       <div className="section-title">Coding</div>
-      <p>
-        At the moment, all of my professional experience pertains to full stack web development. 
-        However, I've dabbled in mechatronics and AI as well, as you'll see below.
-      </p>
 
       <div className="project-item">
         <h2 id="qualiacookbook">Qualia Cookbook</h2>
