@@ -171,14 +171,9 @@ function BackgroundAnimation() {
       lastScrollIndexRef.current = targetIndex;
     };
 
-    // Initial draw - start with circle visible
-    let squares = [];
-    for (let i = 0; i < INTERVAL; i++) {
-      const square = generateSquaresInCircle(i, false, false, true, true);
-      squares.push(square);
-    }
-    squaresRef.current = squares;
-    lastScrollIndexRef.current = INTERVAL;
+    // Start with no shapes - they animate in as user scrolls
+    squaresRef.current = [];
+    lastScrollIndexRef.current = 0;
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     

@@ -8,7 +8,8 @@ export function generateSquaresInCircle(i, isRotating=false, isExpanding=false, 
     const angle = 360 / numSquares;
 
     const square = document.createElement('div');
-    const left = Math.cos(angle * i) * radius + windowWidth / 2 - squareSize / 2;
+    // Position on left side of screen
+    const left = Math.cos(angle * i) * radius + 200 - squareSize / 2;
     const top = Math.sin(angle * i) * radius + windowHeight / 2 - squareSize / 2;
 
     // Faded dark gray color - slightly lighter than background
