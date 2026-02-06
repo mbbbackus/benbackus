@@ -11,6 +11,10 @@ function SinglePage() {
     <div className="single-page-container">
       <Navbar />
       <div className="sections-wrapper">
+        <section id="hero" className="hero-section">
+          <h1 className="hero-name">Ben Backus</h1>
+          <p className="hero-tagline">Code · Art · Writing</p>
+        </section>
         <section id="about" className="page-section">
           <AboutSection />
         </section>
