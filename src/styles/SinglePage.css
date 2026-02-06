@@ -5,6 +5,8 @@
 
 .sections-wrapper {
   padding-top: 60px; /* Space for fixed navbar */
+  position: relative;
+  z-index: 1;
 }
 
 /* Hero section with Ben Backus name */
