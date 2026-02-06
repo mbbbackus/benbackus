@@ -3,6 +3,7 @@ export function generateSquaresInCircle(i, isRotating=false, isExpanding=false, 
     const windowHeight = window.innerHeight;
     const squareSize = 50;
     const radius = 100;
+    const isMobile = windowWidth < 768;
 
     const numSquares = 342;
     const angle = 360 / numSquares;
@@ -12,10 +13,36 @@ export function generateSquaresInCircle(i, isRotating=false, isExpanding=false, 
         ? `rgba(60, 60, 60, ${(i / 300) % 1})` 
         : 'rgba(60, 60, 60, 1)';
 
-    // Left side shape
+    const topY = Math.sin(angle * i) * radius + windowHeight / 2 - squareSize / 2;
+
+    if (isMobile) {
+        // Single centered shape on mobile
+        const square = document.createElement('div');
+        const centerX = Math.cos(angle * i) * radius + windowWidth / 2 - squareSize / 2;
+
+        square.setAttribute('style', `
+            position: fixed;
+            left: ${centerX}px;
+            top: ${topY}px;
+            width: ${isExpanding ? squareSize * Math.random(0.5, 1.5) : squareSize}px;
+            height: ${isExpanding ? squareSize * Math.random(0.5, 1.5) : squareSize}px;
+            border: 1px solid ${borderColor};
+            background-color: #1c1c1c;
+            touch-action: none;
+            z-index: 0;
+            pointer-events: none;
+            ${isRotating ? `transform: rotate(${angle*i}deg)` : ''}
+            ${isCircles ? 'border-radius: 25px;': ''}
+        `);
+        square.setAttribute('class', 'square');
+        document.body.appendChild(square);
+
+        return { left: square, right: null };
+    }
+
+    // Desktop: Left side shape
     const squareLeft = document.createElement('div');
     const leftX = Math.cos(angle * i) * radius + 200 - squareSize / 2;
-    const topY = Math.sin(angle * i) * radius + windowHeight / 2 - squareSize / 2;
 
     squareLeft.setAttribute('style', `
         position: fixed;
@@ -33,7 +60,7 @@ export function generateSquaresInCircle(i, isRotating=false, isExpanding=false, 
     `);
     squareLeft.setAttribute('class', 'square');
 
-    // Right side shape (mirrored)
+    // Desktop: Right side shape (mirrored)
     const squareRight = document.createElement('div');
     const rightX = windowWidth - 200 - Math.cos(angle * i) * radius - squareSize / 2;
 
@@ -56,7 +83,6 @@ export function generateSquaresInCircle(i, isRotating=false, isExpanding=false, 
     document.body.appendChild(squareLeft);
     document.body.appendChild(squareRight);
 
-    // Return both as an object so we can control them together
     return { left: squareLeft, right: squareRight };
 }
 

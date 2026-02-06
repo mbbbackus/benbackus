@@ -17,11 +17,13 @@ function BackgroundAnimation() {
   const CHECKPOINT_SEVEN = INTERVAL * 7; // End of matrix draw - STOP HERE
   const FINISH_LINE = CHECKPOINT_SEVEN;  // End with matrix fully visible
 
-  // Helper to set opacity on both left and right shapes
+  // Helper to set opacity on both left and right shapes (right may be null on mobile)
   const setShapeOpacity = (shape, opacity) => {
     if (shape && shape.left) {
       shape.left.style.opacity = opacity;
-      shape.right.style.opacity = opacity;
+      if (shape.right) {
+        shape.right.style.opacity = opacity;
+      }
     }
   };
 
