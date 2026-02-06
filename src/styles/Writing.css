@@ -27,5 +27,28 @@ a {
     padding: 20px;
     width: min(calc(100% - 40px), 700px);
     margin: auto;
-    line-height: 1.8;
+    line-height: 1.6;
+}
+
+.writingPage h3 {
+    font-size: 1.3rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.writing-item {
+    margin-bottom: 25px;
+}
+
+.writing-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.writing-desc {
+    margin-top: 8px;
+    margin-left: 20px;
+    color: rgba(205, 205, 205, 0.85);
+    font-size: 16px;
 }
