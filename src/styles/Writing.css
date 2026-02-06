@@ -38,17 +38,22 @@ a {
 }
 
 .writing-item {
+    display: flex;
+    gap: 30px;
     margin-bottom: 25px;
+    align-items: flex-start;
 }
 
 .writing-title {
     font-size: 1.1rem;
     font-weight: bold;
+    flex-shrink: 0;
+    width: 200px;
 }
 
 .writing-desc {
-    margin-top: 8px;
-    margin-left: 20px;
+    margin: 0;
     color: rgba(205, 205, 205, 0.85);
     font-size: 16px;
+    flex: 1;
 }
