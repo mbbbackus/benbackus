@@ -5,11 +5,11 @@ function Navbar() {
   return (
     <div className="navbar-container">
         <div className="navbar">
-            <a className="nav-link" href="/">Home</a>
-            <a className="nav-link" href="/#/about">About</a>
-            <a className="nav-link" href="/#/coding">Coding</a>
-            <a className="nav-link" href="/#/art">Art</a>
-            <a className="nav-link" href="/#/writing">Writing</a>
+            <a className="nav-link" href={`${process.env.PUBLIC_URL}/`}>Home</a>
+            <a className="nav-link" href={`${process.env.PUBLIC_URL}/#/about`}>About</a>
+            <a className="nav-link" href={`${process.env.PUBLIC_URL}/#/coding`}>Coding</a>
+            <a className="nav-link" href={`${process.env.PUBLIC_URL}/#/art`}>Art</a>
+            <a className="nav-link" href={`${process.env.PUBLIC_URL}/#/writing`}>Writing</a>
         </div>
     </div>
   );
