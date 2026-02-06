@@ -57,3 +57,12 @@ a {
     display: table;
     clear: both;
 }
+
+@media (max-width: 768px) {
+    .code-img {
+        float: none;
+        display: block;
+        margin: 15px auto;
+        width: min(100%, 350px);
+    }
+}
