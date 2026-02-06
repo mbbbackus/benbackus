@@ -50,12 +50,10 @@ a {
     font-weight: bold;
     flex-shrink: 0;
     width: 200px;
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.writing-title:hover {
     text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    text-underline-offset: 3px;
+    color: #ffffff;
 }
 
 .writing-desc {
