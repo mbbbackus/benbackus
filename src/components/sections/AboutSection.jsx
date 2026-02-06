@@ -21,7 +21,7 @@ function AboutSection() {
 
           I come from a family of entrepreneurs.
           <a href="https://johnback.us"> [1] </a>
-          <a href="https://poised2sell.com/">[2] </a>
+          <a href="https://www.linkedin.com/in/peggy-backus-03b7a89/">[2] </a>
           <a href="https://proof.vc/team/john-backus/">[3] </a><br/><br/>
 
           I'm interested in silly questions like how to get a machine to have experiences and how to 

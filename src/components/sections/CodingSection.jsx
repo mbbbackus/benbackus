@@ -77,10 +77,9 @@ function CodingSection() {
         <h2 id="vexrobotics">Vex Robotics</h2>
         <img className="code-img" src={Robotics} alt="Vex Robotics robot"/>
         <p>
-          In high school, I participated in my school's 
-          competitive <a href="https://www.vexrobotics.com/">Vex Robotics</a> program. I
-          was and still am extremely proud of the robot I built senior year, which won three
-          tournaments and the innovate award at the Virginia state tournament.
+          I did <a href="https://www.vexrobotics.com/">Vex Robotics</a> in high school. I led the construction 
+          and programming of the robot. My teams have won a dozen tournaments, an innovate award, and 
+          qualified for states, nationals, and worlds.
         </p>
         <p>
           <a href={robotLink}>Here's a video discussing the work that went into the robot.</a>
