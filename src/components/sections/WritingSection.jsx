@@ -15,7 +15,7 @@ function WritingSection() {
       <h3>Essays</h3>
       
       <div className="writing-item">
-        <a href={penal} className="writing-title">"In Defense of Penal Lotteries"</a>
+        <a href={penal} className="writing-title">In Defense of Penal Lotteries</a>
         <p className="writing-desc">
           When considering the philosophy of law, should we apply probabilistic punishments to 
           probabilistic crimes? For example, should drunk drivers be punished in a random 5% of 
@@ -25,7 +25,7 @@ function WritingSection() {
       </div>
 
       <div className="writing-item">
-        <a href={complex} className="writing-title">"Complex Present"</a>
+        <a href={complex} className="writing-title">Complex Present</a>
         <p className="writing-desc">
           Due to Einstein's theory of relativity, the universe cannot have a constant timestamp 
           of "the present" that applies to every location in the universe as some locations are 
@@ -37,7 +37,7 @@ function WritingSection() {
       <h3>Fiction</h3>
 
       <div className="writing-item">
-        <a href={cognition} className="writing-title">"Cognition"</a>
+        <a href={cognition} className="writing-title">Cognition</a>
         <p className="writing-desc">
           What is the experience of rapidly gaining consciousness like? Human babies are hardly 
           conscious when they're born, but what would it feel like for all of your mental faculties 
@@ -46,7 +46,7 @@ function WritingSection() {
       </div>
 
       <div className="writing-item">
-        <a href={lovestory} className="writing-title">"Love Story"</a>
+        <a href={lovestory} className="writing-title">Love Story</a>
         <p className="writing-desc">
           How many ways can love be abstracted? How far do the parameters of a relationship have 
           to blur for it to still be "love"?

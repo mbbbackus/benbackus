@@ -49,11 +49,17 @@ a {
     font-weight: bold;
     flex-shrink: 0;
     width: 200px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.writing-title:hover {
+    text-decoration: underline;
 }
 
 .writing-desc {
     margin: 0;
-    color: rgba(205, 205, 205, 0.85);
+    color: rgba(180, 180, 180, 0.85);
     font-size: 16px;
     flex: 1;
 }
