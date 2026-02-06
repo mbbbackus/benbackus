@@ -41,9 +41,19 @@ a {
 }
 
 .code-img {
-    width: min(100%, 450px);
+    width: min(100%, 280px);
     border-radius: 8px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: block;
+    float: right;
+    margin: 0 0 15px 20px;
+}
+
+.project-item {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.project-item::after {
+    content: "";
+    display: table;
+    clear: both;
 }
