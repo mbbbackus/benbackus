@@ -122,8 +122,9 @@ function BackgroundAnimation() {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       
       // Map scroll position to animation index (0 to FINISH_LINE)
+      // Start at CHECKPOINT_ONE (circle fully drawn) so About section shows full circle
       const scrollProgress = Math.min(scrollY / docHeight, 1);
-      const targetIndex = Math.floor(scrollProgress * FINISH_LINE);
+      const targetIndex = Math.floor(scrollProgress * (FINISH_LINE - CHECKPOINT_ONE)) + CHECKPOINT_ONE;
       
       const currentIndex = lastScrollIndexRef.current;
       let squares = squaresRef.current;
@@ -144,9 +145,14 @@ function BackgroundAnimation() {
       lastScrollIndexRef.current = targetIndex;
     };
 
-    // Start with no shapes - they animate in as user scrolls
-    squaresRef.current = [];
-    lastScrollIndexRef.current = 0;
+    // Initialize with circle pattern fully drawn (start at CHECKPOINT_ONE)
+    let squares = [];
+    for (let i = 0; i < CHECKPOINT_ONE; i++) {
+      const newSquare = generateSquaresInCircle(i, false, false, true, true);
+      squares.push(newSquare);
+    }
+    squaresRef.current = squares;
+    lastScrollIndexRef.current = CHECKPOINT_ONE;
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     
