@@ -1,0 +1,19 @@
+.article {
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+
+.article-title {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.article-body {
+    padding: 15px;
+}

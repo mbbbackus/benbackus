@@ -1,5 +1,7 @@
 import React from "react";
 import SinglePage from './components/SinglePage';
+import Graph from './components/Graph';
+import ArticleContainer from './components/ArticleContainer';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -12,6 +14,9 @@ function App() {
           <Route path="/coding" element={<SinglePage/>} />
           <Route path="/art" element={<SinglePage/>} />
           <Route path="/writing" element={<SinglePage/>} />
+          <Route path="/qualia" element={<Graph/>} />
+          <Route path="/qualia/:selectedId" element={<Graph/>} />
+          <Route path="/qualia/article/:articleId" element={<ArticleContainer/>} />
         </Routes>
       </Router>
     </main>
