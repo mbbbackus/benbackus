@@ -143,30 +143,51 @@ function BackgroundAnimation() {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const viewportHeight = window.innerHeight;
-      const docHeight = document.documentElement.scrollHeight - viewportHeight;
       
-      // Don't start animation until user scrolls past the hero section (first viewport)
-      const heroEnd = viewportHeight;
+      // Get section positions
+      const aboutSection = document.getElementById('about');
+      const codingSection = document.getElementById('coding');
+      const artSection = document.getElementById('art');
+      const writingSection = document.getElementById('writing');
+      const selfStudySection = document.getElementById('self-study');
       
-      if (scrollY < heroEnd) {
-        // Still in hero section - hide everything
-        if (lastScrollIndexRef.current > 0) {
-          // Reverse any visible animation
-          let squares = squaresRef.current;
-          for (let i = lastScrollIndexRef.current; i > 0; i--) {
-            squares = hideShape(i, squares);
-          }
-          squaresRef.current = squares;
-          lastScrollIndexRef.current = 0;
-        }
+      if (!aboutSection || !codingSection || !artSection || !writingSection || !selfStudySection) {
         return;
       }
       
-      // Calculate progress after hero section
-      const scrollAfterHero = scrollY - heroEnd;
-      const remainingDoc = docHeight - heroEnd;
-      const scrollProgress = Math.min(scrollAfterHero / remainingDoc, 1);
-      const targetIndex = Math.floor(scrollProgress * FINISH_LINE);
+      const aboutTop = aboutSection.offsetTop - 60; // Account for navbar
+      const codingTop = codingSection.offsetTop - 60;
+      const artTop = artSection.offsetTop - 60;
+      const writingTop = writingSection.offsetTop - 60;
+      const selfStudyTop = selfStudySection.offsetTop - 60;
+      const docEnd = document.documentElement.scrollHeight - viewportHeight;
+      
+      let targetIndex = 0;
+      
+      if (scrollY < aboutTop) {
+        // Before About - no animation
+        targetIndex = 0;
+      } else if (scrollY < codingTop) {
+        // In About section - draw circles, then hide them
+        const sectionProgress = (scrollY - aboutTop) / (codingTop - aboutTop);
+        targetIndex = Math.floor(sectionProgress * CHECKPOINT_TWO);
+      } else if (scrollY < artTop) {
+        // In Coding section - draw mobius squares, then hide them
+        const sectionProgress = (scrollY - codingTop) / (artTop - codingTop);
+        targetIndex = CHECKPOINT_TWO + Math.floor(sectionProgress * (CHECKPOINT_FOUR - CHECKPOINT_TWO));
+      } else if (scrollY < writingTop) {
+        // In Art section - draw fractal/spinning squares, then hide them
+        const sectionProgress = (scrollY - artTop) / (writingTop - artTop);
+        targetIndex = CHECKPOINT_FOUR + Math.floor(sectionProgress * (CHECKPOINT_SIX - CHECKPOINT_FOUR));
+      } else if (scrollY < selfStudyTop) {
+        // In Writing section - draw matrix/random squares, then hide them
+        const sectionProgress = (scrollY - writingTop) / (selfStudyTop - writingTop);
+        targetIndex = CHECKPOINT_SIX + Math.floor(sectionProgress * (CHECKPOINT_EIGHT - CHECKPOINT_SIX));
+      } else {
+        // In Self-Study section - draw diamonds
+        const sectionProgress = Math.min((scrollY - selfStudyTop) / (docEnd - selfStudyTop), 1);
+        targetIndex = CHECKPOINT_EIGHT + Math.floor(sectionProgress * (FINISH_LINE - CHECKPOINT_EIGHT));
+      }
       
       const currentIndex = lastScrollIndexRef.current;
       let squares = squaresRef.current;
