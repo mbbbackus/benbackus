@@ -1,102 +1,74 @@
 .selfStudyPage {
-  max-width: 800px;
-  width: 100%;
-  color: #e0e0e0;
-  font-family: "Garamond", serif;
+  color: rgb(205, 205, 205);
+  font-size: 18px;
   padding: 20px;
+  width: min(calc(100% - 40px), 700px);
+  margin: auto;
+  font-family: "Garamond", serif;
 }
 
 .selfStudyPage a {
-  color: #88c0d0;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.selfStudyPage a:hover {
-  color: #a3d5e8;
+  color: white;
+  text-decoration-thickness: 0.1px;
+  text-underline-offset: 5px;
 }
 
 .study-intro {
-  margin-bottom: 40px;
-  font-size: 1.1rem;
-  line-height: 1.8;
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
 .study-philosophy {
-  margin-bottom: 50px;
-  padding: 25px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
-  border-left: 3px solid #5e81ac;
+  margin-bottom: 40px;
+  line-height: 1.6;
 }
 
 .study-philosophy h2 {
-  color: #ffffff;
+  font-size: 1.4rem;
   margin-bottom: 15px;
-  font-size: 1.5rem;
 }
 
 .study-philosophy p {
-  line-height: 1.8;
   margin-bottom: 15px;
 }
 
-.study-philosophy strong {
-  color: #88c0d0;
-}
-
 .study-section {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .study-section h2 {
-  color: #ffffff;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.4rem;
+  margin-bottom: 15px;
 }
 
 .study-content {
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .study-content > p {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 /* Course Items */
 .course-list {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 }
 
 .course-item {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 10px;
-  border-left: 3px solid #4c566a;
-}
-
-.course-item.completed {
-  border-left-color: #a3be8c;
-}
-
-.course-item.in-progress {
-  border-left-color: #ebcb8b;
+  margin-bottom: 15px;
 }
 
 .course-item h3 {
-  color: #ffffff;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
 }
 
 .course-desc {
-  color: #b0b0b0;
   font-size: 0.95rem;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  line-height: 1.6;
 }
 
 .topics {
@@ -106,33 +78,37 @@
 }
 
 .topic {
-  background: rgba(136, 192, 208, 0.15);
-  color: #88c0d0;
-  padding: 4px 12px;
-  border-radius: 15px;
+  color: rgb(180, 180, 180);
   font-size: 0.85rem;
 }
 
+.topic::after {
+  content: " ·";
+}
+
+.topic:last-child::after {
+  content: "";
+}
+
 .progress-bar {
-  height: 8px;
+  height: 6px;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-  margin-bottom: 15px;
+  border-radius: 3px;
+  margin-bottom: 12px;
   overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #ebcb8b, #d08770);
-  border-radius: 4px;
-  transition: width 0.3s ease;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
 }
 
 /* Anki Decks */
 .deck-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   margin-top: 15px;
 }
 
@@ -140,51 +116,51 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 15px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.deck-item:last-child {
+  border-bottom: none;
 }
 
 .deck-name {
-  color: #e0e0e0;
+  color: rgb(205, 205, 205);
 }
 
 .deck-count {
-  color: #88c0d0;
+  color: rgb(150, 150, 150);
   font-size: 0.9rem;
 }
 
 .anki-total {
-  text-align: center;
-  color: #888;
-  margin-top: 15px;
-  font-style: italic;
+  text-align: right;
+  color: rgb(150, 150, 150);
+  margin-top: 10px;
+  font-size: 0.9rem;
 }
 
 /* Chess Stats */
 .chess-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 15px;
   margin: 20px 0;
 }
 
 .stat-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 10px;
   text-align: center;
+  padding: 15px;
 }
 
 .stat-value {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ffffff;
+  font-size: 1.8rem;
+  color: white;
 }
 
 .stat-label {
   font-size: 0.85rem;
-  color: #888;
+  color: rgb(150, 150, 150);
   margin-top: 5px;
 }
 
@@ -192,34 +168,18 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin: 20px 0;
-  font-size: 1.1rem;
-}
-
-.wins {
-  color: #a3be8c;
-}
-
-.draws {
-  color: #d8dee9;
-}
-
-.losses {
-  color: #bf616a;
+  margin: 15px 0;
+  font-size: 1rem;
+  color: rgb(180, 180, 180);
 }
 
 .chess-link {
-  text-align: center;
   margin-top: 15px;
 }
 
 /* Mobile adjustments */
 @media only screen and (max-width: 600px) {
   .selfStudyPage {
-    padding: 15px;
-  }
-
-  .study-philosophy {
     padding: 15px;
   }
 

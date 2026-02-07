@@ -36,7 +36,7 @@ function BackgroundAnimation() {
       // Drawing circle
       offsetIndex = index;
       if (offsetIndex >= squares.length) {
-        newSquare = generateSquaresInCircle(offsetIndex, false, false, true, true, false);
+        newSquare = generateSquaresInCircle(offsetIndex, false, false, true, true, false, false);
         return [...squares, newSquare];
       } else {
         setShapeOpacity(squares[offsetIndex], 1);
@@ -49,7 +49,7 @@ function BackgroundAnimation() {
       // Drawing mobius (squares)
       offsetIndex = index - CHECKPOINT_ONE;
       if (offsetIndex >= squares.length) {
-        newSquare = generateSquaresInCircle(offsetIndex - INTERVAL, false, false, false, true, false);
+        newSquare = generateSquaresInCircle(offsetIndex - INTERVAL, false, false, false, true, false, false);
         return [...squares, newSquare];
       } else {
         setShapeOpacity(squares[offsetIndex], 1);
@@ -62,7 +62,7 @@ function BackgroundAnimation() {
       // Drawing fractal (rotating squares)
       offsetIndex = index - CHECKPOINT_TWO;
       if (offsetIndex >= squares.length) {
-        newSquare = generateSquaresInCircle(offsetIndex - INTERVAL * 2, true, false, false, false, false);
+        newSquare = generateSquaresInCircle(offsetIndex - INTERVAL * 2, true, false, false, false, false, false);
         return [...squares, newSquare];
       } else {
         setShapeOpacity(squares[offsetIndex], 1);
@@ -75,7 +75,7 @@ function BackgroundAnimation() {
       // Drawing matrix (expanding squares)
       offsetIndex = index - CHECKPOINT_THREE;
       if (offsetIndex >= squares.length) {
-        newSquare = generateSquaresInCircle(offsetIndex - INTERVAL * 3, false, true, false, false, false);
+        newSquare = generateSquaresInCircle(offsetIndex - INTERVAL * 3, false, true, false, false, false, false);
         return [...squares, newSquare];
       } else {
         setShapeOpacity(squares[offsetIndex], 1);
@@ -85,10 +85,10 @@ function BackgroundAnimation() {
       offsetIndex = index - CHECKPOINT_FOUR;
       setShapeOpacity(squares[offsetIndex], 0);
     } else if (index >= CHECKPOINT_EIGHT && index < CHECKPOINT_NINE) {
-      // Drawing hexagons (Self-Study)
+      // Drawing spinning diamonds with random dimensions (Self-Study)
       offsetIndex = index - CHECKPOINT_FOUR;
       if (offsetIndex >= squares.length) {
-        newSquare = generateSquaresInCircle(offsetIndex - INTERVAL * 4, true, false, false, true, true);
+        newSquare = generateSquaresInCircle(offsetIndex - INTERVAL * 4, false, false, false, true, false, true);
         return [...squares, newSquare];
       } else {
         setShapeOpacity(squares[offsetIndex], 1);

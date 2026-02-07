@@ -40,7 +40,7 @@ function SelfStudySection() {
       </div>
 
       <div className="study-section">
-        <h2>📐 Math Academy</h2>
+        <h2>Math Academy</h2>
         <div className="study-content">
           <div className="course-list">
             <div className="course-item completed">
@@ -113,7 +113,7 @@ function SelfStudySection() {
       </div>
 
       <div className="study-section">
-        <h2>🃏 Anki</h2>
+        <h2>Anki</h2>
         <div className="study-content">
           <p>
             I use Anki for spaced repetition—the scientifically-proven method of reviewing information 
@@ -121,19 +121,19 @@ function SelfStudySection() {
           </p>
           <div className="deck-list">
             <div className="deck-item">
-              <span className="deck-name">📐 Math</span>
+              <span className="deck-name">Math</span>
               <span className="deck-count">~170 cards</span>
             </div>
             <div className="deck-item">
-              <span className="deck-name">💻 Systems Design</span>
+              <span className="deck-name">Systems Design</span>
               <span className="deck-count">~140 cards</span>
             </div>
             <div className="deck-item">
-              <span className="deck-name">🧠 Mental Health Quotes</span>
+              <span className="deck-name">Mental Health Quotes</span>
               <span className="deck-count">~30 cards</span>
             </div>
             <div className="deck-item">
-              <span className="deck-name">🎤 Debate</span>
+              <span className="deck-name">Debate</span>
               <span className="deck-count">~25 cards</span>
             </div>
           </div>
@@ -142,7 +142,7 @@ function SelfStudySection() {
       </div>
 
       <div className="study-section">
-        <h2>♟️ Chess.com</h2>
+        <h2>Chess.com</h2>
         <div className="study-content">
           <p>
             Chess has been my tactical playground since May 2023. I primarily play Rapid games 
@@ -167,9 +167,9 @@ function SelfStudySection() {
             </div>
           </div>
           <div className="chess-record">
-            <span className="wins">369 W</span>
-            <span className="draws">32 D</span>
-            <span className="losses">339 L</span>
+            <span>369 W</span>
+            <span>32 D</span>
+            <span>339 L</span>
           </div>
           <p className="chess-link">
             <a href="https://www.chess.com/member/mbbbackus">View my Chess.com profile →</a>
