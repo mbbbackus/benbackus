@@ -4,7 +4,7 @@ import '../../styles/SelfStudy.css';
 function SelfStudySection() {
   return (
     <div className="selfStudyPage">
-      <div className="section-title">Self-Study</div>
+      <div className="section-title">Study</div>
 
       <div className="study-intro">
         <p>

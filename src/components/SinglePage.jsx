@@ -30,7 +30,7 @@ function SinglePage() {
         <section id="writing" className="page-section">
           <WritingSection />
         </section>
-        <section id="self-study" className="page-section">
+        <section id="study" className="page-section">
           <SelfStudySection />
         </section>
       </div>

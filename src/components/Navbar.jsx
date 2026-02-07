@@ -22,7 +22,7 @@ function Navbar() {
             <a className="nav-link" href="#coding" onClick={(e) => scrollToSection(e, 'coding')}>Coding</a>
             <a className="nav-link" href="#art" onClick={(e) => scrollToSection(e, 'art')}>Art</a>
             <a className="nav-link" href="#writing" onClick={(e) => scrollToSection(e, 'writing')}>Writing</a>
-            <a className="nav-link" href="#self-study" onClick={(e) => scrollToSection(e, 'self-study')}>Self-Study</a>
+            <a className="nav-link" href="#study" onClick={(e) => scrollToSection(e, 'study')}>Study</a>
         </div>
     </div>
   );

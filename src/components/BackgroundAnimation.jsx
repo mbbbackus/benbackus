@@ -149,7 +149,7 @@ function BackgroundAnimation() {
       const codingSection = document.getElementById('coding');
       const artSection = document.getElementById('art');
       const writingSection = document.getElementById('writing');
-      const selfStudySection = document.getElementById('self-study');
+      const selfStudySection = document.getElementById('study');
       
       if (!aboutSection || !codingSection || !artSection || !writingSection || !selfStudySection) {
         return;
