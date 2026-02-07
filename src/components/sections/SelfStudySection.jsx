@@ -40,17 +40,12 @@ function SelfStudySection() {
       </div>
 
       <div className="study-section">
-        <h2>Math Academy</h2>
+        <h2 className="section-header-centered">Math Academy</h2>
+        <p className="streak-info">Longest streak: 101 days</p>
         <div className="study-content">
           <div className="course-list">
-            <div className="course-item completed">
+            <div className="course-item">
               <h3>Mathematical Foundations II ✓</h3>
-              <p className="course-desc">
-                Master the algebra of advanced functions including quadratics, logarithms, and trigonometry. 
-                Dive deep into the theory of polynomials, learn the basics of limits, derivatives, and integrals 
-                from calculus, and explore a variety of concepts from higher math including complex numbers, 
-                vectors, probability, and statistics.
-              </p>
               <div className="topics">
                 <span className="topic">Quadratics</span>
                 <span className="topic">Logarithms</span>
@@ -65,14 +60,8 @@ function SelfStudySection() {
               </div>
             </div>
 
-            <div className="course-item completed">
+            <div className="course-item">
               <h3>Mathematical Foundations III ✓</h3>
-              <p className="course-desc">
-                Learn advanced calculus techniques for computing limits, derivatives, and integrals, and apply 
-                calculus to solve problems in the context of related rates, optimization, particle motion, and 
-                differential equations. Dive deeper into complex numbers, vectors, matrices, parametric and 
-                polar curves, probability, and statistics.
-              </p>
               <div className="topics">
                 <span className="topic">Advanced Calculus</span>
                 <span className="topic">Related Rates</span>
@@ -85,15 +74,8 @@ function SelfStudySection() {
               </div>
             </div>
 
-            <div className="course-item in-progress">
+            <div className="course-item">
               <h3>Mathematics for Machine Learning (20%)</h3>
-              <p className="course-desc">
-                Learn the key skills and concepts from linear algebra, multivariable calculus, and probability 
-                & statistics needed to understand and implement core machine learning algorithms. Covers gradient 
-                descent, neural networks and backpropagation, support vector machines, extensions of linear 
-                regression, naive Bayes classifiers, principal component analysis, matrix factorization methods, 
-                and Gaussian mixture models.
-              </p>
               <div className="progress-bar">
                 <div className="progress-fill" style={{width: '20%'}}></div>
               </div>
@@ -113,11 +95,12 @@ function SelfStudySection() {
       </div>
 
       <div className="study-section">
-        <h2>Anki</h2>
+        <h2 className="section-header-centered">Anki</h2>
+        <p className="streak-info">Longest streak: 124 days</p>
         <div className="study-content">
           <p>
             I use Anki for spaced repetition—the scientifically-proven method of reviewing information 
-            at optimal intervals to maximize long-term retention. I've maintained a streak for over a year.
+            at optimal intervals to maximize long-term retention.
           </p>
           <div className="deck-list">
             <div className="deck-item">
@@ -142,7 +125,8 @@ function SelfStudySection() {
       </div>
 
       <div className="study-section">
-        <h2>Chess.com</h2>
+        <h2 className="section-header-centered">Chess.com</h2>
+        <p className="streak-info">Longest streak: 35 days</p>
         <div className="study-content">
           <p>
             Chess has been my tactical playground since May 2023. I primarily play Rapid games 
@@ -171,8 +155,8 @@ function SelfStudySection() {
             <span>32 D</span>
             <span>339 L</span>
           </div>
-          <p className="chess-link">
-            <a href="https://www.chess.com/member/mbbbackus">View my Chess.com profile →</a>
+          <p className="chess-link-small">
+            <a href="https://www.chess.com/member/mbbbackus">play me in chess!</a>
           </p>
         </div>
       </div>
