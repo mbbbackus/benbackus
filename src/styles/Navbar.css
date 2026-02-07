@@ -1,8 +1,23 @@
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #1c1c1c;
+    padding: 15px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 .nav-link {
     margin-right: 15px;
     color: gray;
-    text-decoration-thickness: 0.1px;
-    text-underline-offset: 5px;
+    text-decoration: none;
 }
 
 * {

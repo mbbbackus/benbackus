@@ -1,6 +1,6 @@
 body {
     color: white;
-    background-color: rgb(20, 20, 20);
+    background-color: #1c1c1c;
 }
 
 * {
@@ -15,15 +15,54 @@ a {
 
 .coding-container {
     color: rgb(205, 205, 205);
-    font-size: 20px;
+    font-size: 18px;
     padding: 20px;
-    width: min(calc(100%-40px), 1000px);
+    width: min(calc(100% - 40px), 700px);
     margin: auto;
 }
 
-.code-img {
-    width: min(100%, 1000px);
-    border-radius: 10px;
-    margin-top: 10px;
+.codePage {
+    color: rgb(205, 205, 205);
+    font-size: 18px;
+    padding: 20px;
+    width: min(calc(100% - 40px), 700px);
+    margin: auto;
+}
+
+.codePage h2 {
+    font-size: 1.4rem;
+    margin-top: 30px;
     margin-bottom: 10px;
+}
+
+.codePage p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.code-img {
+    width: min(100%, 280px);
+    border-radius: 8px;
+    float: right;
+    margin: 0 0 15px 20px;
+}
+
+.project-item {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.project-item::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 768px) {
+    .code-img {
+        float: none;
+        display: block;
+        margin: 15px auto;
+        width: min(100%, 350px);
+    }
 }

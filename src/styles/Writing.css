@@ -1,6 +1,6 @@
 body {
     color: white;
-    background-color: rgb(20, 20, 20);
+    background-color: #1c1c1c;
 }
 
 * {
@@ -15,12 +15,61 @@ a {
 
 .writing-container {
     color: rgb(205, 205, 205);
-    font-size: 20px;
+    font-size: 18px;
     padding: 20px;
-    width: min(calc(100%-40px), 1000px);
+    width: min(calc(100% - 40px), 700px);
     margin: auto;
 }
 
 .writingPage {
-    margin-top: 25px;
+    color: rgb(205, 205, 205);
+    font-size: 18px;
+    padding: 20px;
+    width: min(calc(100% - 40px), 700px);
+    margin: auto;
+    line-height: 1.6;
+}
+
+.writingPage h3 {
+    font-size: 1.3rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.writing-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    align-items: flex-start;
+}
+
+.writing-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    width: 200px;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    text-underline-offset: 3px;
+    color: #d0d0d0;
+}
+
+.writing-desc {
+    margin: 0;
+    color: rgba(180, 180, 180, 0.85);
+    font-size: 16px;
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .writing-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .writing-title {
+        width: auto;
+    }
 }

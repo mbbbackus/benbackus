@@ -299,7 +299,7 @@ function Home() {
 
     const captionElement = captionText ? (
       <div className="caption-container fade-in">
-        <a href={`/#/${captionText}`}>{captionText}</a>
+        <a href={`${process.env.PUBLIC_URL}/#/${captionText.toLowerCase()}`}>{captionText}</a>
       </div>
     ) : '';
       

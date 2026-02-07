@@ -14,10 +14,22 @@ a {
 
 .about-container {
     color: rgb(205, 205, 205);
-    font-size: 20px;
+    font-size: 18px;
     padding: 20px;
-    width: min(calc(100%-40px), 1000px);
+    width: min(calc(100% - 40px), 700px);
     margin: auto;
+}
+
+.about-page {
+    color: rgb(205, 205, 205);
+    font-size: 18px;
+    padding: 20px;
+    width: min(calc(100% - 40px), 700px);
+    margin: auto;
+}
+
+.about-text {
+    line-height: 1.6;
 }
 
 .idea-container {
