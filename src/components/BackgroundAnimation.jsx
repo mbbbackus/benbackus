@@ -119,12 +119,31 @@ function BackgroundAnimation() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const viewportHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight - viewportHeight;
       
-      // Map scroll position to animation index (0 to FINISH_LINE)
-      // Start at CHECKPOINT_ONE (circle fully drawn) so About section shows full circle
-      const scrollProgress = Math.min(scrollY / docHeight, 1);
-      const targetIndex = Math.floor(scrollProgress * (FINISH_LINE - CHECKPOINT_ONE)) + CHECKPOINT_ONE;
+      // Don't start animation until user scrolls past the hero section (first viewport)
+      const heroEnd = viewportHeight;
+      
+      if (scrollY < heroEnd) {
+        // Still in hero section - hide everything
+        if (lastScrollIndexRef.current > 0) {
+          // Reverse any visible animation
+          let squares = squaresRef.current;
+          for (let i = lastScrollIndexRef.current; i > 0; i--) {
+            squares = hideShape(i, squares);
+          }
+          squaresRef.current = squares;
+          lastScrollIndexRef.current = 0;
+        }
+        return;
+      }
+      
+      // Calculate progress after hero section
+      const scrollAfterHero = scrollY - heroEnd;
+      const remainingDoc = docHeight - heroEnd;
+      const scrollProgress = Math.min(scrollAfterHero / remainingDoc, 1);
+      const targetIndex = Math.floor(scrollProgress * FINISH_LINE);
       
       const currentIndex = lastScrollIndexRef.current;
       let squares = squaresRef.current;
@@ -145,14 +164,9 @@ function BackgroundAnimation() {
       lastScrollIndexRef.current = targetIndex;
     };
 
-    // Initialize with circle pattern fully drawn (start at CHECKPOINT_ONE)
-    let squares = [];
-    for (let i = 0; i < CHECKPOINT_ONE; i++) {
-      const newSquare = generateSquaresInCircle(i, false, false, true, true);
-      squares.push(newSquare);
-    }
-    squaresRef.current = squares;
-    lastScrollIndexRef.current = CHECKPOINT_ONE;
+    // Initialize with nothing visible - animation starts on scroll
+    squaresRef.current = [];
+    lastScrollIndexRef.current = 0;
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     
