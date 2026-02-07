@@ -121,10 +121,23 @@ function SelfStudySection() {
           </p>
           <div className="deck-list">
             <div className="deck-item">
-              <span className="deck-name">Decks coming soon...</span>
-              <span className="deck-count"></span>
+              <span className="deck-name">📐 Math</span>
+              <span className="deck-count">~170 cards</span>
+            </div>
+            <div className="deck-item">
+              <span className="deck-name">💻 Systems Design</span>
+              <span className="deck-count">~140 cards</span>
+            </div>
+            <div className="deck-item">
+              <span className="deck-name">🧠 Mental Health Quotes</span>
+              <span className="deck-count">~30 cards</span>
+            </div>
+            <div className="deck-item">
+              <span className="deck-name">🎤 Debate</span>
+              <span className="deck-count">~25 cards</span>
             </div>
           </div>
+          <p className="anki-total">~365 cards total</p>
         </div>
       </div>
 

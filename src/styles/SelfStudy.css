@@ -154,6 +154,13 @@
   font-size: 0.9rem;
 }
 
+.anki-total {
+  text-align: center;
+  color: #888;
+  margin-top: 15px;
+  font-style: italic;
+}
+
 /* Chess Stats */
 .chess-stats {
   display: grid;
