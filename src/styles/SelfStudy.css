@@ -1,0 +1,226 @@
+.selfStudyPage {
+  max-width: 800px;
+  width: 100%;
+  color: #e0e0e0;
+  font-family: "Garamond", serif;
+  padding: 20px;
+}
+
+.selfStudyPage a {
+  color: #88c0d0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.selfStudyPage a:hover {
+  color: #a3d5e8;
+}
+
+.study-intro {
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.study-philosophy {
+  margin-bottom: 50px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border-left: 3px solid #5e81ac;
+}
+
+.study-philosophy h2 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.study-philosophy p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.study-philosophy strong {
+  color: #88c0d0;
+}
+
+.study-section {
+  margin-bottom: 50px;
+}
+
+.study-section h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.study-content {
+  line-height: 1.7;
+}
+
+.study-content > p {
+  margin-bottom: 20px;
+}
+
+/* Course Items */
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.course-item {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border-left: 3px solid #4c566a;
+}
+
+.course-item.completed {
+  border-left-color: #a3be8c;
+}
+
+.course-item.in-progress {
+  border-left-color: #ebcb8b;
+}
+
+.course-item h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.course-desc {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topic {
+  background: rgba(136, 192, 208, 0.15);
+  color: #88c0d0;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+}
+
+.progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ebcb8b, #d08770);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Anki Decks */
+.deck-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.deck-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+}
+
+.deck-name {
+  color: #e0e0e0;
+}
+
+.deck-count {
+  color: #88c0d0;
+  font-size: 0.9rem;
+}
+
+/* Chess Stats */
+.chess-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+.chess-record {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+
+.wins {
+  color: #a3be8c;
+}
+
+.draws {
+  color: #d8dee9;
+}
+
+.losses {
+  color: #bf616a;
+}
+
+.chess-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Mobile adjustments */
+@media only screen and (max-width: 600px) {
+  .selfStudyPage {
+    padding: 15px;
+  }
+
+  .study-philosophy {
+    padding: 15px;
+  }
+
+  .chess-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+}

@@ -52,6 +52,6 @@
 }
 
 /* Ensure sections have proper spacing */
-#hero, #about, #coding, #art, #writing {
+#hero, #about, #coding, #art, #writing, #self-study {
   scroll-margin-top: 60px; /* Account for fixed navbar when jumping to sections */
 }

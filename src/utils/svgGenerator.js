@@ -1,4 +1,4 @@
-export function generateSquaresInCircle(i, isRotating=false, isExpanding=false, isCircles=false, isFadeIn=false, container=null) {
+export function generateSquaresInCircle(i, isRotating=false, isExpanding=false, isCircles=false, isFadeIn=false, isHexagon=false, container=null) {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
     const squareSize = 50;
@@ -33,6 +33,7 @@ export function generateSquaresInCircle(i, isRotating=false, isExpanding=false, 
             pointer-events: none;
             ${isRotating ? `transform: rotate(${angle*i}deg)` : ''}
             ${isCircles ? 'border-radius: 25px;': ''}
+            ${isHexagon ? 'clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);': ''}
         `);
         square.setAttribute('class', 'square');
         document.body.appendChild(square);
@@ -57,6 +58,7 @@ export function generateSquaresInCircle(i, isRotating=false, isExpanding=false, 
         pointer-events: none;
         ${isRotating ? `transform: rotate(${angle*i}deg)` : ''}
         ${isCircles ? 'border-radius: 25px;': ''}
+        ${isHexagon ? 'clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);': ''}
     `);
     squareLeft.setAttribute('class', 'square');
 
@@ -77,6 +79,7 @@ export function generateSquaresInCircle(i, isRotating=false, isExpanding=false, 
         pointer-events: none;
         ${isRotating ? `transform: rotate(${-angle*i}deg)` : ''}
         ${isCircles ? 'border-radius: 25px;': ''}
+        ${isHexagon ? 'clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);': ''}
     `);
     squareRight.setAttribute('class', 'square');
     

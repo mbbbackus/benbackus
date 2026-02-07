@@ -7,15 +7,17 @@ function BackgroundAnimation() {
 
   const INTERVAL = 300;
   
-  // Checkpoints - end at CHECKPOINT_SEVEN so Writing shows full animation
-  const CHECKPOINT_ONE = INTERVAL;      // End of circle draw
+  // Checkpoints - end at CHECKPOINT_NINE so Self-Study shows full animation
+  const CHECKPOINT_ONE = INTERVAL;      // End of circle draw (About)
   const CHECKPOINT_TWO = INTERVAL * 2;  // End of circle hide / start mobius
-  const CHECKPOINT_THREE = INTERVAL * 3; // End of mobius draw
+  const CHECKPOINT_THREE = INTERVAL * 3; // End of mobius draw (Coding)
   const CHECKPOINT_FOUR = INTERVAL * 4;  // End of mobius hide / start fractal
-  const CHECKPOINT_FIVE = INTERVAL * 5;  // End of fractal draw
+  const CHECKPOINT_FIVE = INTERVAL * 5;  // End of fractal draw (Art)
   const CHECKPOINT_SIX = INTERVAL * 6;   // End of fractal hide / start matrix
-  const CHECKPOINT_SEVEN = INTERVAL * 7; // End of matrix draw - STOP HERE
-  const FINISH_LINE = CHECKPOINT_SEVEN;  // End with matrix fully visible
+  const CHECKPOINT_SEVEN = INTERVAL * 7; // End of matrix draw (Writing)
+  const CHECKPOINT_EIGHT = INTERVAL * 8; // End of matrix hide / start hexagons
+  const CHECKPOINT_NINE = INTERVAL * 9;  // End of hexagon draw (Self-Study) - STOP HERE
+  const FINISH_LINE = CHECKPOINT_NINE;   // End with hexagons fully visible
 
   // Helper to set opacity on both left and right shapes (right may be null on mobile)
   const setShapeOpacity = (shape, opacity) => {
@@ -34,7 +36,7 @@ function BackgroundAnimation() {
       // Drawing circle
       offsetIndex = index;
       if (offsetIndex >= squares.length) {
-        newSquare = generateSquaresInCircle(offsetIndex, false, false, true, true);
+        newSquare = generateSquaresInCircle(offsetIndex, false, false, true, true, false);
         return [...squares, newSquare];
       } else {
         setShapeOpacity(squares[offsetIndex], 1);
@@ -47,7 +49,7 @@ function BackgroundAnimation() {
       // Drawing mobius (squares)
       offsetIndex = index - CHECKPOINT_ONE;
       if (offsetIndex >= squares.length) {
-        newSquare = generateSquaresInCircle(offsetIndex - INTERVAL, false, false, false, true);
+        newSquare = generateSquaresInCircle(offsetIndex - INTERVAL, false, false, false, true, false);
         return [...squares, newSquare];
       } else {
         setShapeOpacity(squares[offsetIndex], 1);
@@ -60,7 +62,7 @@ function BackgroundAnimation() {
       // Drawing fractal (rotating squares)
       offsetIndex = index - CHECKPOINT_TWO;
       if (offsetIndex >= squares.length) {
-        newSquare = generateSquaresInCircle(offsetIndex - INTERVAL * 2, true, false, false, false);
+        newSquare = generateSquaresInCircle(offsetIndex - INTERVAL * 2, true, false, false, false, false);
         return [...squares, newSquare];
       } else {
         setShapeOpacity(squares[offsetIndex], 1);
@@ -73,7 +75,20 @@ function BackgroundAnimation() {
       // Drawing matrix (expanding squares)
       offsetIndex = index - CHECKPOINT_THREE;
       if (offsetIndex >= squares.length) {
-        newSquare = generateSquaresInCircle(offsetIndex - INTERVAL * 3, false, true, false, false);
+        newSquare = generateSquaresInCircle(offsetIndex - INTERVAL * 3, false, true, false, false, false);
+        return [...squares, newSquare];
+      } else {
+        setShapeOpacity(squares[offsetIndex], 1);
+      }
+    } else if (index >= CHECKPOINT_SEVEN && index < CHECKPOINT_EIGHT) {
+      // Hiding matrix
+      offsetIndex = index - CHECKPOINT_FOUR;
+      setShapeOpacity(squares[offsetIndex], 0);
+    } else if (index >= CHECKPOINT_EIGHT && index < CHECKPOINT_NINE) {
+      // Drawing hexagons (Self-Study)
+      offsetIndex = index - CHECKPOINT_FOUR;
+      if (offsetIndex >= squares.length) {
+        newSquare = generateSquaresInCircle(offsetIndex - INTERVAL * 4, true, false, false, true, true);
         return [...squares, newSquare];
       } else {
         setShapeOpacity(squares[offsetIndex], 1);
@@ -110,6 +125,14 @@ function BackgroundAnimation() {
     } else if (index >= CHECKPOINT_SIX && index <= CHECKPOINT_SEVEN) {
       // Reverse matrix drawing
       const offsetIndex = index - CHECKPOINT_THREE - 1;
+      setShapeOpacity(squares[offsetIndex], 0);
+    } else if (index > CHECKPOINT_SEVEN && index < CHECKPOINT_EIGHT) {
+      // Reverse matrix hiding
+      const offsetIndex = index - CHECKPOINT_FOUR - 1;
+      setShapeOpacity(squares[offsetIndex], 1);
+    } else if (index >= CHECKPOINT_EIGHT && index <= CHECKPOINT_NINE) {
+      // Reverse hexagon drawing
+      const offsetIndex = index - CHECKPOINT_FOUR - 1;
       setShapeOpacity(squares[offsetIndex], 0);
     }
     

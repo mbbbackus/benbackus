@@ -5,6 +5,7 @@ import AboutSection from "./sections/AboutSection";
 import CodingSection from "./sections/CodingSection";
 import ArtSection from "./sections/ArtSection";
 import WritingSection from "./sections/WritingSection";
+import SelfStudySection from "./sections/SelfStudySection";
 import '../styles/SinglePage.css';
 
 function SinglePage() {
@@ -28,6 +29,9 @@ function SinglePage() {
         </section>
         <section id="writing" className="page-section">
           <WritingSection />
+        </section>
+        <section id="self-study" className="page-section">
+          <SelfStudySection />
         </section>
       </div>
     </div>
