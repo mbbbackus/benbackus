@@ -49,20 +49,6 @@ function ArtSection() {
   return (
     <div className="artPage">
       <div className="section-title">Art</div>
-      <div className="art-text-container">
-        <p className="art-text">
-          I'd like to preface my visual art by saying that I love color. 
-          Philosophically, it's what provoked me to consider <a href="https://plato.stanford.edu/entries/qualia/">qualia</a> when 
-          thinking about AI, which has made the aesthetic experience of 
-          color much more rich for me. <br/><br/>
-
-          Before I learned about <a href="https://plato.stanford.edu/entries/qualia/">qualia</a> , most of my art was figurative 
-          and drawn in black and white. Since then, I've come to relish 
-          in the mindless and methodical process of designing abstract 
-          compositions while experimenting with underutilized color 
-          palettes. <br/><br/>
-        </p>
-      </div>
       <div className="art-section-container">
         {renderArt()}
       </div>
