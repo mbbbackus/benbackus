@@ -18,7 +18,6 @@ function Navbar() {
   return (
     <div className="navbar-container">
         <div className="navbar">
-            <a className="nav-link" href="#" onClick={scrollToTop}>Home</a>
             <a className="nav-link" href="#about" onClick={(e) => scrollToSection(e, 'about')}>About</a>
             <a className="nav-link" href="#coding" onClick={(e) => scrollToSection(e, 'coding')}>Coding</a>
             <a className="nav-link" href="#art" onClick={(e) => scrollToSection(e, 'art')}>Art</a>
