@@ -1,0 +1,65 @@
+html, body { margin: 0; background: #000; overflow: hidden; }
+
+.ants-home {
+  position: fixed;
+  inset: 0;
+  height: 100dvh;
+  background: #000;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ants-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.ants-info {
+  position: absolute;
+  top: max(16px, env(safe-area-inset-top));
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  box-sizing: border-box;
+  padding: 14px 24px 16px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, .72);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-align: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #fff;
+  cursor: default;
+  transition: opacity .3s ease;
+}
+
+.ants-info.hidden { opacity: 0; pointer-events: none; }
+
+.ants-info h1 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
+
+.ants-info nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  font-size: 15px;
+}
+
+.ants-info a { color: #fff; opacity: .75; text-decoration: none; }
+.ants-info a:hover { opacity: 1; text-decoration: underline; }
+
+@media (max-width: 480px) {
+  .ants-info { padding: 12px 18px 14px; }
+  .ants-info h1 { font-size: 22px; }
+  .ants-info nav { font-size: 14px; gap: 6px 18px; }
+}
