@@ -54,14 +54,24 @@ function AntsHome() {
     // phones fire resize when the address bar slides; only restart when the width really changes
     const onResize = () => { if (window.innerWidth !== width) init(); };
     init(); frame();
+    // on phones the page is taller than the screen (see AntsHome.css); start scrolled so Safari draws it under its status bar
+    if (document.documentElement.scrollHeight > window.innerHeight) window.scrollTo(0, 100);
     window.addEventListener('resize', onResize);
     return () => { cancelAnimationFrame(raf); window.removeEventListener('resize', onResize); };
   }, []);
 
+  // toggle on a tap, not a drag; pointer events still fire on phones where scrolling is locked (no click is synthesized)
+  const down = useRef(null);
+  const onPointerDown = e => { down.current = [e.clientX, e.clientY]; };
+  const onPointerUp = e => {
+    if (down.current && Math.hypot(e.clientX - down.current[0], e.clientY - down.current[1]) < 10) setShowInfo(s => !s);
+    down.current = null;
+  };
+
   return (
-    <div className="ants-home" onClick={() => setShowInfo(s => !s)}>
+    <div className="ants-home" onPointerDown={onPointerDown} onPointerUp={onPointerUp}>
       <canvas ref={canvas} className="ants-canvas" />
-      <header className={`ants-info${showInfo ? '' : ' hidden'}`} onClick={e => e.stopPropagation()}>
+      <header className={`ants-info${showInfo ? '' : ' hidden'}`} onPointerDown={e => e.stopPropagation()} onPointerUp={e => e.stopPropagation()}>
         <h1>Ben Backus</h1>
         <nav>
           <a href={resume}>Resume</a>
