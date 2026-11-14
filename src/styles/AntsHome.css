@@ -40,12 +40,12 @@ html, body { margin: 0; background: #000; overflow: hidden; }
   max-width: calc(100% - 32px);
   box-sizing: border-box;
   padding: 14px 24px 16px;
-  border-radius: 12px;
+  border-radius: 0;
   background: rgba(0, 0, 0, .72);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   text-align: center;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   color: #fff;
   cursor: default;
   transition: opacity .3s ease;
