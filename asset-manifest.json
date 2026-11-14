@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.93166b57.css",
-    "main.js": "/static/js/main.64479295.js",
+    "main.css": "/static/css/main.23ac7bb0.css",
+    "main.js": "/static/js/main.cd55ea05.js",
     "static/media/Backus_Resume_2024.pdf": "/static/media/Backus_Resume_2024.eca239a983b4134a119b.pdf",
     "index.html": "/index.html",
-    "main.93166b57.css.map": "/static/css/main.93166b57.css.map",
-    "main.64479295.js.map": "/static/js/main.64479295.js.map"
+    "main.23ac7bb0.css.map": "/static/css/main.23ac7bb0.css.map",
+    "main.cd55ea05.js.map": "/static/js/main.cd55ea05.js.map"
   },
   "entrypoints": [
-    "static/css/main.93166b57.css",
-    "static/js/main.64479295.js"
+    "static/css/main.23ac7bb0.css",
+    "static/js/main.cd55ea05.js"
   ]
 }
